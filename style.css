@@ -1,0 +1,970 @@
+/* ---------------- GLOBAL ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.header_section .navbar {
+  padding: 18px 50px;
+  background-color: #fff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+  height: 55px;
+}
+
+/* center nav menu */
+.navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 28px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #111 !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:hover {
+  color: #ff6b61 !important;
+}
+
+/* right side icons */
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user_icon {
+  margin-left: 12px;
+}
+
+.user_icon a {
+  font-size: 18px;
+  color: #111;
+  text-decoration: none;
+}
+
+/* call button */
+.call_btn {
+  margin-left: 15px;
+}
+
+.call_btn a {
+  background: #ff6b61;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.call_btn a:hover {
+  background: #ff3b2e;
+}
+
+.padding_left10 {
+  margin-left: 8px;
+}
+
+/* ---------------- BANNER SECTION ---------------- */
+.banner_section {
+  padding-top: 100px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; 
+}
+
+/* Floating Dancer Image */
+.banner_img {
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 2;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes floatY {
+  0% {
+    transform: translate(-50%, -55%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -55%) translateY(-25px);
+  }
+  100% {
+    transform: translate(-50%, -55%) translateY(0px);
+  }
+}
+
+/* Title Text */
+.banner_taital {
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111;
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+
+/* Read More Button */
+.contact_bt {
+  margin-top: 60px;    
+  position: relative;
+  z-index: 3;          
+}
+
+.contact_bt a {
+  background: #ff6b61;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.contact_bt a:hover {
+  background: #ff3b2e;
+}
+
+/* ---------------- SERVICE SECTION ---------------- */
+.service_section {
+  background: linear-gradient(90deg, #fa7e64 10%, #ebab28 94%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.service_taital {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+/* Layout for items */
+.service_section_2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  transition: transform 0.5s ease;
+}
+
+/* Each Item */
+.item {
+  width: 250px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Circle Image Box */
+.image_box {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 6px solid #fff;
+  transition: background 0.3s ease;
+}
+
+.image_box img {
+  max-width: 70%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image_box:hover {
+  background: #fff;
+}
+
+.image_box:hover img {
+  transform: scale(1.1);
+}
+
+/* Dance Text */
+.sound_text {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Read More Button */
+.buy_bt a {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.buy_bt a:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Carousel wrapper */
+.carousel_wrapper {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+}
+
+/* Carousel Buttons */
+.carousel_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.carousel_btn:hover {
+  background: #ff6b6b;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+.about_section {
+  background: #f9f9f9; /* unified light grey background */
+  padding: 80px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title */
+.about_section .about_taital {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Paragraph Text */
+.about_section .about_text,
+.about_section .about_text_1 {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* About Images */
+.about_section .about_img {
+  margin: 30px 0;
+}
+
+.about_section .about_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about_section .about_img img:hover {
+  transform: scale(1.05);
+}
+
+/* Read More Button */
+.about_section .readmore_bt a {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff6b6b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about_section .readmore_bt a:hover {
+  background: #222;
+}
+
+
+/* ---------------- PRICE SECTION ---------------- */
+.price_section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.layout_padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.price_taital {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.price_section_2 {
+    margin-top: 40px;
+}
+
+.first_price_text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border-radius: 15px 15px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Gradient variations for different pricing tiers */
+.col-md-6:nth-child(1) .first_price_text {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+.col-md-6:nth-child(2) .first_price_text {
+    background: linear-gradient(135deg, #ff8a50, #ffb347);
+}
+
+.price_box {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.price_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.taital_main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 5px;
+}
+
+.rate_text {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1;
+}
+
+.rate_text span {
+    color: #f6815e !important;
+    font-size: 36px;
+}
+
+.month_text {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+.dummy_text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.readmore_bt {
+    margin-top: 25px;
+}
+
+.readmore_bt a {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.readmore_bt a:hover {
+    background: linear-gradient(135deg, #555, #777);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .price_taital {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .first_price_text {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .rate_text {
+        font-size: 36px;
+    }
+
+    .rate_text span {
+        font-size: 28px;
+    }
+
+    .price_box {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    .readmore_bt a {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+/* Additional styling */
+.col-md-6 {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+
+/* ---------------- TESTIMONIALS ---------------- */
+.client_sectiion {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 60px 20px;
+}
+
+.client_sectiion .client_taital {
+  font-size: 34px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* All Testimonial Cards */
+.client_sectiion .client_section_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual Testimonial Cards */
+.client_sectiion .client_main,
+.client_sectiion .client_main_2 {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.client_sectiion .client_main:hover,
+.client_sectiion .client_main_2:hover {
+  transform: translateY(-8px);
+}
+
+.client_sectiion .client_main:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Left Section (Image) */
+.client_sectiion .client_left,
+.client_sectiion .client_left_2 {
+  flex: 0 0 90px;
+}
+
+.client_sectiion .client_img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff6b6b;
+}
+
+/* Right Section (Text) */
+.client_sectiion .client_right,
+.client_sectiion .client_right_2 {
+  flex: 1;
+}
+
+.client_sectiion .name_text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.client_sectiion .name_text img {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.client_sectiion .dolor_text {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin-bottom: 8px;
+}
+
+.client_sectiion .lorem_text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .client_sectiion .client_main,
+  .client_sectiion .client_main_2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .client_sectiion .client_right,
+  .client_sectiion .client_right_2 {
+    text-align: center;
+  }
+
+  .client_sectiion .client_left,
+  .client_sectiion .client_left_2 {
+    margin-bottom: 15px;
+  }
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+.contact_section {
+    background: url(Images/client-bg.png);
+    padding: 80px 0;
+}
+
+.layout_padding {
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact_taital {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.contact_section_2 {
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.contact_main {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Input Fields */
+.email-bt,
+.massage-bt {
+    width: 100%;
+    padding: 18px 25px;
+    border: 2px solid #e0e0e0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    color: #666;
+}
+
+.email-bt {
+    border-radius: 50px;
+}
+
+.massage-bt {
+    border-radius: 25px;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.email-bt:focus,
+.massage-bt:focus {
+    border-color: #ff6b35;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+}
+
+/* Send Button */
+.send_bt {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.send_bt a {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.send_bt a:hover {
+    background: linear-gradient(45deg, #e55a2b, #e6841a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact_taital {
+        font-size: 36px;
+    }
+    
+    .contact_main {
+        padding: 30px 20px;
+    }
+    
+    .send_bt a {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_section {
+        padding: 40px 0;
+    }
+    
+    .contact_taital {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .contact_main {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+    
+    .email-bt, .massage-bt {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ---------------- FOOTER SECTION ---------------- */
+.footer_section {
+    background: #333;
+    color: #fff;
+}
+
+/* Location Section */
+.location_bg {
+    background: #444;
+    padding: 30px 0;
+}
+
+.location_main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.location_main li {
+    display: flex;
+    align-items: center;
+}
+
+.location_main a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.location_main a:hover {
+    color: #ff6b35;
+}
+
+.location_main img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.padding_15 {
+    padding-left: 15px;
+}
+
+/* Map Section */
+.map_main {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.map-responsive {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+/* Copyright Section */
+.copyright_section {
+    background: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copyright_text {
+    color: #ccc;
+    margin: 0;
+    font-size: 14px;
+}
+
+.copyright_text a {
+    color: #ff6b35;
+    text-decoration: none;
+}
+
+.copyright_text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 991px) {
+  .navbar-nav {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .banner_taital {
+    font-size: 70px;
+  }
+  .banner_img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner_taital {
+    font-size: 50px;
+  }
+  .banner_img {
+    max-width: 300px;
+  }
+}
+
+
+
+/* Responsive: stack boxes on small screens */
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .client_sectiion .client_main,
+  .client_sectiion .client_main_2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .client_sectiion .client_right,
+  .client_sectiion .client_right_2 {
+    text-align: center;
+  }
+
+  .client_sectiion .client_left,
+  .client_sectiion .client_left_2 {
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .contact_taital {
+        font-size: 36px;
+    }
+    
+    .contact_main {
+        padding: 30px 20px;
+    }
+    
+    .location_main ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .location_main li {
+        justify-content: center;
+    }
+    
+    .send_bt a {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_section {
+        padding: 40px 0;
+    }
+    
+    .contact_taital {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .contact_main {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+    
+    .email-bt, .massage-bt {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
